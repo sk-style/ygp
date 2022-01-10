@@ -1,0 +1,71 @@
+@mixin _btn( $type:'base' ) {
+    > * {
+        @content;
+        max-width: 100%;
+        font-size: $fz-s;
+        @include mq('sp') {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        @include mq('pc') {
+            white-space: nowrap;     
+        }
+
+            
+        //ベースボタン
+        @if( $type == 'base' ) {
+            width: 366px;
+            border: 1px solid $color-line;
+            letter-spacing: 0.2em;
+            @include mq('sp') {
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+            @include mq('pc') {
+                height: 85px;
+                line-height: 85px;
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+        }
+
+        @else if( $type == 'black' ) {
+            color: $color-white;
+            background-color: $color-txt;
+            @include mq('sp') {
+                padding-top: 21px;
+                padding-bottom: 21px;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        @else if( $type == 'white' ) {
+            width: 598px;
+            background-color: $color-white;
+            text-align: center;
+            line-height: 1.714;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            @include mq('pc') {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            >span {
+                display: block;
+                font-family: $ff-en;
+                font-size: $fz-l;
+                letter-spacing: 0.4em;
+                line-height: 1;
+            }
+
+            >small {
+                display: block;
+                margin-top: 8px;
+                font-size: $fz-s;
+                line-height: 1;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
+}

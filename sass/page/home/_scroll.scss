@@ -1,0 +1,36 @@
+.scroll {
+    position: absolute;
+    bottom: 50px;
+    right: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-txt {
+        font-family: $ff-en;
+        color: $color-white;
+        font-weight: $fw-bold;
+        font-size: 12px;
+        writing-mode: vertical-rl;
+        letter-spacing: 0.4em;
+    }
+
+    &-bar {
+        margin-top: 10px;
+        background-color: $color-tit;
+        width: 1px;
+        height: 108px;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: '';
+            background-color: $color-main;
+            width: 1px;
+            height: 38px;
+            animation: bar 3.5s infinite;
+        }
+    }
+}

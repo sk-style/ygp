@@ -1,0 +1,44 @@
+.footer {
+    background-color: $color-main;
+    @include mq('sp') {
+        margin-top: 90px; 
+        padding: 37px 0;
+    }
+    @include mq('pc') {
+        margin-top: 140px; 
+        padding: 43px 0;
+    }
+
+    .inner {
+        text-align: center;
+    }
+
+    &-btn {
+        @include mq('sp') {
+            margin-top: 28px;
+            margin-bottom: 64px; 
+        }
+        @include mq('pc') {
+            margin-top: 50px;
+            margin-bottom: 92px; 
+        }
+        @include _btn('white');
+    }
+
+    &-logo a {
+        width: 155px;
+    }
+
+    &-copy {
+        font-family: $ff-en;
+        letter-spacing: 0.1em;
+        @include mq('sp') {
+            margin-top: 33px;
+        }
+        @include mq('pc') {         
+            font-size: $fz-s;
+            margin-top: 28px;
+        }
+    }
+
+}

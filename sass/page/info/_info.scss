@@ -1,0 +1,41 @@
+.info {
+    &-def {
+        @include mq('pc') {
+            display: flex;
+        }
+
+        &:nth-child(n + 2) {
+            @include mq('sp') {
+                margin-top: 55px;
+            }
+            @include mq('pc') {
+                margin-top: 90px;
+            }
+        }
+    }
+
+    &-dtit {
+        text-align: center;
+        font-family: $ff-en;
+        font-weight: $fw-bold;
+        letter-spacing: 0.4em;
+        @include mq('sp') {
+            $fz-base: $fz-base;
+            padding: 30px 0;
+            border-top: 2px solid $color-txt;
+            border-bottom: 2px solid $color-txt;
+        }
+        @include mq('pc') {   
+            padding-top: 43px;
+            flex: 0 0 169px;
+        }
+    }
+
+    &-data {
+        @include mq('pc') {
+            flex-grow: 1;
+            border-top: 2px solid $color-txt;
+            margin-left: 61px;  
+        }
+    }
+}

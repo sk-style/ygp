@@ -1,0 +1,82 @@
+// form初期化
+input,
+textarea,
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-weight: $fw-base;
+    width: 100%;
+    
+    &::-ms-expand {
+        display: none;
+    }
+    
+    &:hover,
+    &:focus {
+        border-bottom-color: $color-main;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+input,
+select {
+    border: none;
+    border-bottom: 1px solid $color-line;
+    margin-top: 22px;
+}
+
+input,
+textarea {
+    font-size: $fz-base;
+    padding: 0.4em 1.2em;
+}
+
+select {
+    font-size: $fz-s;
+    color: $color-main;
+    padding: 0.2em 1.2em 1.6em 1.2em;
+}
+
+option {
+    color: $color-txt;
+}
+
+textarea {
+    resize: vertical;
+    border: none;
+    border: 1px solid $color-line;
+    margin-top: 28px;
+    @include mq('sp') {
+        height: 315px;
+    }
+    @include mq('pc') {   
+        height: 417px;
+    }
+}
+
+.form-btn input {
+    -webkit-appearance: none;
+    background-image: none;
+    border-radius: 0;
+    display: inline-block;
+    font-size: $fz-base;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border: none;
+        padding: 0;
+    }
+}

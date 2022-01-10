@@ -1,0 +1,71 @@
+.info {
+    @include mq('sp') {
+        margin-top: 55px;
+    }
+    @include mq('pc') {
+        margin-top: 90px;
+    }
+
+    >.inner {
+        @include mq('pc') {   
+            max-width: 870px;
+        }
+    }
+
+    .sec-tit {
+        @include mq('sp') {
+            margin-bottom: 26px;
+        }
+        @include mq('pc') {           
+            margin-bottom: 46px;
+        }
+    }
+
+    &-list {
+        border-top: 1px solid $color-line;
+    }
+
+    &-item {
+        border-bottom: 1px solid $color-line;
+        display: flex;
+        letter-spacing: 0.1em;
+
+        @include mq('sp') {
+            flex-direction: column;
+            padding: 26px 15px;
+        }
+        
+        @include mq('pc') {
+            flex: 0 0 93px;
+            font-size: $fz-s;
+            padding: 43px 30px;
+            line-height: 2.1428;
+        }
+
+        >time {
+            white-space: nowrap;
+            @include mq('sp') {
+                font-size: 13px;
+            }
+        }
+
+        >p {
+            flex: 0 1 100%;
+            @include mq('pc') {
+                margin-left: 10.35%;               
+            }
+        }
+    }
+
+    &-btn {
+        text-align: center;
+        @include _btn;
+        @include mq('sp') {
+            margin-top: 26px;
+        }
+        @include mq('pc') {
+            margin-top: 47px;
+        }
+    }
+
+}

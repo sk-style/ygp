@@ -1,0 +1,208 @@
+.about {
+    $this: &;
+    @include mq('sp') {
+        margin-top: 90px;   
+    }
+    @include mq('pc') {
+        margin-top: 212px;   
+    }
+
+    >.sec-img {
+        @include mq('sp') {
+            background-image: url(/img/about_bg.jpg);
+        }
+        @include mq('pc') {
+            background-image: url(../img/about_bg.jpg);
+        }
+    }
+
+    .sec-tit {
+        @include mq('sp') {
+            margin-bottom: 50px;
+        }
+        @include mq('pc') {
+            margin-bottom: 80px;
+        }
+    }
+    
+    &-tit {
+        font-family: $ff-en;
+        font-weight: $fw-bold;
+        position: relative;
+        @include mq('sp') {
+            display: flex;
+            align-items: center;
+            display: flex;
+            height: 18px;
+            line-height: 18px;
+            position: relative;
+        }
+        
+        @include mq('pc') {
+            display: inline-block;
+            padding-left: 40px;
+        }
+
+        &:after {
+            content: '';
+            @include mq('sp') {
+                border-top: 1px solid $color-txt;
+                content: '';
+                flex-grow: 1;
+                margin-left: 16px;
+            }
+            @include mq('pc') {
+                position: absolute;    
+                width: 126px;
+                background-color: $color-txt;
+                top: 50%;
+                left: -16px;
+                transform: translateY(-50%);
+                height: 1px;
+            }
+        }
+    }
+
+    &-wrap {
+        @include mq('pc') {
+            max-width: 936px;  
+        }
+    }
+
+
+    &-item {
+        &:nth-child(n + 2) {
+            @include mq('sp') {
+                margin-top: 90px;
+            }
+            @include mq('pc') {
+                margin-top: 122px;
+            }
+        }
+
+        // PHILOSOPHY
+        &:nth-child(1) {
+            #{$this}-tit {
+                letter-spacing: 0.3em;
+            }
+
+            #{$this}-wrap {
+                @include mq('sp') {
+                    margin-top: 59px;
+                }
+                @include mq('pc') {
+                    margin-top: 58px;
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                }    
+            }
+
+            #{$this}-img {
+                text-align: center;
+                @include mq('sp') {
+                    margin-bottom: 68px;
+                }
+                @include mq('pc') {     
+                    margin-bottom: 27px;
+                    flex: 0 0 23.1%;
+                }
+                >img {
+                    width: 155px;
+                }
+            }
+        
+            #{$this}-content {
+                @include mq('pc') {
+                    flex-grow: 1;
+                    margin-left: 8.6%;    
+                }
+                letter-spacing: 0.3em;
+        
+                > h4 {
+                    font-family: $ff-en;
+                    font-weight: $fw-bold;
+                    font-size: 20px;
+                    letter-spacing: 0.3em;
+                }
+            }
+        
+            #{$this}-txt {
+                font-size: $fz-s;
+                line-height: 2.142;
+                letter-spacing: 0.3em;
+                @include mq('sp') {
+                    margin-top: 27px;
+                }
+                @include mq('pc') {                   
+                    margin-top: 10px;
+                }
+            }        
+        }
+
+        // COMPANY
+        &:nth-child(2) {
+            #{$this}-tit {
+                letter-spacing: 0.4em;
+            }
+
+            #{$this}-wrap {
+                @include mq('sp') {
+                    margin-top: 50px;
+                }
+                @include mq('pc') {
+                    margin: 78px auto 0
+                }    
+            }
+
+            #{$this}-def {
+                letter-spacing: 0.1em;    
+                @include mq('sp') {
+                    line-height: 1.785;
+                } 
+                @include mq('pc') {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: $fz-s;
+                    line-height: 2.142;
+
+                    >div {
+                        &:first-child {
+                            #{$this}-data {
+                                margin-left: 25px;
+                            }            
+                        }
+    
+                        &:nth-child(2) {     
+                            padding-left: 20px;
+                             
+                            #{$this}-data {
+                                margin-left: 44px;
+                            }            
+                        }
+                    }
+                }
+
+                >div >div {
+                    @include mq('pc') {
+                        display: flex;                       
+                    }
+
+                    &:nth-child(n + 2) {
+                        @include mq('sp') {
+                            margin-top: 27px;
+                        }
+                        @include mq('pc') {                            
+                            margin-top: 2.2em;
+                        }
+                    }
+                }
+            }
+
+            #{$this}-dtit {
+                width: 65px;
+                font-weight: $fw-bold;
+            }
+        }
+    }
+}

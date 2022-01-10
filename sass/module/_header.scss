@@ -1,0 +1,63 @@
+.header {
+    $this: &;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: map-get($layer, 'header');
+
+    &._show {
+        #{$this}-bg {
+            display: block;
+        }
+
+        #{$this}-logo a {
+            display: block;
+        }
+
+        .nav-icon {
+            padding: 0;
+            position: relative;
+
+            >div >span {
+                background-color: $color-txt;
+            }
+        }
+    }
+
+    .nav-icon {
+        transition: padding-top .7s ease 0s;
+    }
+
+    &-bg {
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $color-white-tra;
+
+    }
+
+    .inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: initial;
+        @include mq('sp') {
+            height: $h-header-sp;
+            justify-content: space-between;
+            padding: 0 24px 0 21px;
+        }
+        @include mq('pc') {
+            height: $h-header;
+            justify-content: space-between;
+            padding: 0 50px; 
+        }
+    }
+
+    &-logo a {
+        display: none;
+        animation: active .4s;
+        width: 160px;
+    }
+}

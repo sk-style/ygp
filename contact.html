@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YG PLANNING INC.｜株式会社ワイジープランニング</title>
+    <meta name="description" content="今後ご提案">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180"> -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!---- OGP ---->
+    <!-- <meta property="og:title" content="YG PLANNING INC.｜株式会社ワイジープランニング">
+    <meta property="og:description" content="「og:description」での文字数は80~90文字が最適とされています。">
+    <meta property="og:url" content="http://www.yg-planning.co.jp/">
+    <meta property="og:image" content="http://www.yg-planning.co.jp../img/ogp.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YG PLANNING INC.｜株式会社ワイジープランニング">
+    <meta name="twitter:card" content="summary_large_image"> -->
+    <!---- /OGP ---->
+</head>
+
+<body>
+
+    <!---- header ---->
+    <header class="header">
+        <div class="header-bg"></div>
+        <div class="inner">
+            <p class="header-logo"><a href="#"><img src="img/header_logo.png" alt="YG PLANNING"></a></p>
+
+            <!----  nav ---->
+            <nav class="nav">
+                <div class="nav-icon"><div><span></span><span></span><span></span></div></div>
+                <div class="nav-close"></div>
+                <div class="nav-inner">
+                    <div class="nav-logo"><a href="#"><img src="img/logo.svg" alt="YG PLANNING"></a></div>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#info">INFORMATION</a></li>
+                        <li class="nav-item">
+                            <a href="#bisiness">BUSINESS</a>
+                            <ul>
+                                <li><a href="#chiaki">CHIAKI KATAGIRI</a></li>
+                                <li><a href="#import">IMPORT</a></li>
+                                <li><a href="#oem">OEM</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#about">ABOUT US</a></li>
+                        <li class="nav-item"><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav><!---- /nav ---->
+
+        </div>
+    </header><!---- /header ---->    
+
+    <!---- main ---->
+    <main class="main">
+
+        <!---- mv ---->
+        <div class="top _contact">
+            <div class="inner">
+                <h1 class="top-tit">CONTACT</h1>
+            </div>
+        </div><!---- /mv ---->
+
+        <!---- contact ---->
+        <section class="contact">
+            <div class="inner">
+                <p class="contact-txt">ご質問やご相談等がございましたら、お電話またはフォームよりお気軽にお問合せください。</p>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <h2>お電話でのお問い合わせ</h2>
+                        <div><span>03-5826-8367</span>受付時間：平日 9:30～18:00</div>
+                    </li>
+                    <li class="contact-item">
+                        <h2>フォームでのお問い合わせ</h2>
+
+                        <!---- form ---->
+                        <form class="form" id="js-form">
+                            <dl class="form-def">
+                                <div>
+                                    <dt class="form-dtit"><label for="company">Company</label></dt>
+                                    <dd class="form-data"><input id="company" type="text" required></dd>
+                                </div>
+                                <div>
+                                    <dt class="form-dtit"><label for="name">Name</label></dt>
+                                    <dd class="form-data"><input id="name" type="text" required></dd>
+                                </div>
+                                <div>
+                                    <dt class="form-dtit"><label for="mail">E-mail</label></dt>
+                                    <dd class="form-data"><input id="mail" type="email" required></dd>
+                                </div>
+                                <div>
+                                    <dt class="form-dtit"><label for="tel">Tel</label></dt>
+                                    <dd class="form-data"><input id="tel" type="tel" required></dd>
+                                </div>
+                                <div>
+                                    <dt class="form-dtit"><label for="select">お問い合わせ内容</label></dt>
+                                    <dd class="form-data _select">
+                                        <select id="select required">
+                                            <option value="placeholder" selected>お問い合わせ項目を選択して下さい</option>
+                                            <option value="CHIAKI">CHIAKI KATAGIRI</option>
+                                            <option value="インポート シューズ">インポート シューズ</option>
+                                            <option value="OEM">OEM</option>
+                                            <option value="プレス">プレス</option>
+                                            <option value="採用">採用</option>
+                                            <option value="その他">その他</option>
+                                        </select>        
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt class="form-dtit"><label for="message">Message</label></dt>
+                                    <dd class="form-data"><textarea id="message" required></textarea></dd>
+                                </div>
+                            </dl>
+                            <div class="form-btn"><button id="js-submit" type="submit">SUBMIT</button></div>
+                        </form><!---- /form ---->
+                        
+                    </li>
+                </ul>
+            </div>
+        </section><!---- /import ---->
+
+    </main><!---- /main ---->
+
+    <!---- footer ---->        
+    <footer class="footer">
+        <div class="inner">
+            <div class="footer-logo"><a href=""><img src="img/logo.svg" alt="YG PLANNING"></a></div>
+            <p class="footer-copy"><small lang="en">Copyrights © YG PLANNING INC. All Rights Reserved.</small></p>
+        </div>
+    </footer><!---- /footer ---->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/fitie.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+.import {
+    $this: &;
+
+    &-nav {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-btn { 
+        &:nth-child(n + 2) {
+            @include mq('pc') {
+                margin-left: 177px;    
+            }
+        }
+        &._itary a {
+            background: url(../img/import/btn_itary.png) center / cover no-repeat;
+        }
+
+        &._spain a {
+            background: url(../img/import/btn_spain.png) center / cover no-repeat;
+        }
+
+        a {
+            width: 188px;
+            height: 174px;
+            line-height: 150px;
+            text-align: center; 
+            font-family: $ff-en;
+            font-weight: $fw-bold;
+            letter-spacing: 0.3em;    
+        }
+    }
+
+    &-list {
+        @include mq('sp') {
+            margin-top: 24px;
+        }
+        @include mq('pc') {           
+            margin-top: 18px;
+        }
+    }
+
+    &-item {
+        &:nth-child(n + 2) {
+            @include mq('sp') {               
+                margin-top: 90px;
+            }
+            @include mq('pc') {               
+                margin-top: 130px;
+            }
+        }
+
+        // ITALY
+        &._itary {
+            #{$this}-img {
+                @include mq('sp') {
+                    background: url(../img/import/img_itary_sp.jpg) center / cover no-repeat;
+                }
+                @include mq('pc') {                   
+                    background: url(../img/import/img_itary.jpg) center / cover no-repeat;
+                }
+            }
+        }
+
+        // SPAIN
+        &._spain {
+            #{$this}-img {
+                @include mq('sp') {
+                    background: url(../img/import/img_spain_sp.jpg) center / cover no-repeat;
+                }
+                @include mq('pc') {                   
+                    background: url(../img/import/img_spain.jpg) center / cover no-repeat;
+                }
+            }
+        }
+    }
+
+    &-img {
+        @include mq('sp') {
+            padding-top: 57.142%;
+        }
+        @include mq('pc') {   
+            padding-top: 27.090%;
+        }
+    }
+    
+    &-tit {
+        font-family: $ff-en;
+        letter-spacing: 0.36em;
+        
+        >span {
+            font-weight: $fw-bold;
+        }
+        
+        @include mq('sp') {
+            font-size: $fz-base;
+            margin-top: 55px;
+            padding-left: 15px;
+        }
+        
+        @include mq('pc') {
+            font-size: 22px;
+            margin-top: 65px;
+            padding: 0 0.8em;
+        }
+    }
+
+    &-def {
+        @include mq('sp') {
+            margin-top: 55px;           
+            padding: 0 15px;     
+        }
+        @include mq('pc') {
+            margin-top: 67px;           
+            padding: 0 1em;
+        }
+
+        >div {
+            @include mq('pc') {
+                display: flex;   
+            }
+
+            &:nth-child(n + 2) {
+                @include mq('sp') {
+                    margin-top: 55px;
+                }
+                @include mq('pc') {
+                    margin-top: 44px;                  
+                }
+            }
+        }
+    }
+
+    &-dtit {
+        font-family: $ff-en;
+        letter-spacing: 0.3em;
+        font-weight: $fw-bold;
+        @include mq('sp') {
+            font-size: $fz-base;
+        }
+        @include mq('pc') {          
+            flex: 0 0 200px;
+        }
+    }
+
+    &-data {
+        font-size: $fz-s;
+        letter-spacing: 0.1em;
+        @include mq('sp') {
+            margin-top: 15px;
+        }
+        @include mq('pc') {            
+            flex-grow: 1;
+            margin-left: 42px;
+            line-height: 2.142;
+        }
+    }
+
+}

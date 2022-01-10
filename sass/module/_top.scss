@@ -1,0 +1,57 @@
+.top {
+    @include mq('sp') {
+        height: 234px;
+    }
+    @include mq('pc') {        
+        height: 385px;
+    }
+    
+    &-tit {
+        font-family: $ff-en;
+        letter-spacing: 0.4em;
+        color: $color-white;
+        text-align: center;
+        @include mq('sp') {
+            font-size: 23px;
+            line-height: 234px + $h-header-sp;
+        }
+        @include mq('pc') {           
+            font-size: $fz-l;
+            line-height: 385px + $h-header;
+        }
+    }
+
+    &._info {
+        @include mq('sp') {  
+            background: url(../img/info/top_bg_sp.jpg) center / cover no-repeat;
+        }
+
+        @include mq('pc') {  
+            background: url(../img/info/top_bg_pc.jpg) center / cover no-repeat;
+        }
+    }
+
+    &._import {
+        @include mq('sp') {
+            background: url(../img/import/top_bg_sp.jpg) center / cover no-repeat;
+
+        }
+        @include mq('pc') {  
+            background: url(../img/import/top_bg_pc.jpg) center / cover no-repeat;
+        }
+    }
+
+    &._contact {
+        @include mq('sp') {
+            background: url(../img/contact/top_bg_sp.jpg) center / cover no-repeat;
+
+        }
+        @include mq('pc') {  
+            background: url(../img/contact/top_bg_pc.jpg) center / cover no-repeat;
+        }
+        
+        h1 {
+            color: $color-tit;
+        }
+    }
+}

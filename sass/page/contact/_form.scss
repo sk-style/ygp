@@ -1,0 +1,81 @@
+form {
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+.form {
+    &-def {
+        @include mq('sp') {
+            margin: 57px 0 40px;
+        }
+        @include mq('pc') {      
+            margin: 85px 0 64px;
+        }
+
+        >div {
+            &:nth-child(n + 2) {
+                @include mq('sp') {
+                    margin-top: 52px;
+                }
+                @include mq('pc') {                    
+                    margin-top: 64px;
+                }
+            }
+        }
+    }
+
+    &-data {
+        line-height: 1;
+        @include mq('pc') {
+            flex-grow: 1;
+        }
+
+        input {
+            height: 40px;
+        }
+
+        &._select {
+            position: relative;
+
+            &:after {
+                position: absolute;
+                right: 10px;
+                top: 31px;
+                width: 0;
+                height: 0;
+                content: '';
+                border-style: solid;
+                border-width: 12px 7px 0 7px;
+                border-color: #efe4e1 transparent transparent transparent;
+            }        
+        }
+    }
+
+    &-btn {
+        @include mq('sp') {
+            margin-top: 40px;
+        }
+        @include mq('pc') {   
+            margin-top: 64px;
+        }
+        text-align: center;
+        @include _btn('black') {
+            font-family: $ff-en;
+            letter-spacing: 0.3em;
+            font-weight: $fw-bold;
+            width: 424px;
+            @include mq('sp') {
+                padding-top: 22px;
+                padding-bottom: 22px;
+            }
+            @include mq('pc') {
+                height: 80px;
+                line-height: 80px;          
+            }
+
+            >span {
+                display: block;
+            }
+        }
+    }
+}

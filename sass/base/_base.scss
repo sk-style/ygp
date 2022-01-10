@@ -1,0 +1,94 @@
+body {
+    font-family: $ff-base;
+    font-weight: $fw-base;
+    letter-spacing: $ls-base;
+    color: $color-txt;
+    background-color: $color-white;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    // text-align: justify;
+    // font-feature-settings: 'palt';
+    // -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+    @include mq('pc') {
+        font-size: $fz-base;
+        line-height: $lh-base-sp;
+    }
+    @include mq('sp') {
+        font-size: $fz-s;
+        line-height: $lh-base;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    display: inline-block;
+    color: $color-txt;
+}
+
+.inner {
+    max-width: $mw-base;
+    margin: 0 auto;
+    box-sizing: content-box;
+    @include mq('sp') {
+        padding: 0 30px;
+    }
+    @include mq('pc') {   
+        padding: 0 50px;
+    }
+}
+
+.sec-tit {
+    font-family: $ff-en;
+    text-align: center;
+    letter-spacing: 0.4em;
+    line-height: 1.2;
+    @include mq('sp') {
+        font-size: $fz-l-sp;
+
+    }
+    @include mq('pc') {
+        font-size: $fz-l;
+    }
+}
+
+.sec-img {
+    background-position: center center;
+    background-size: cover;
+    @include mq('sp') {
+        height: 186px;
+    }
+    @include mq('pc') {
+        height: 400px;
+    }
+
+    & + .inner {
+        @include mq('sp') {
+            margin-top: 55px;
+        }
+        @include mq('pc') {
+            margin-top: 90px;
+        }
+    }
+
+}
+
+._ls0 {
+    letter-spacing: 0;
+}
+
+// 表示切替
+._sp {
+    @include mq('pc') {
+        display: none;
+    }
+}
+._pc {
+    @include mq('sp') {
+        display: none;
+    }
+}

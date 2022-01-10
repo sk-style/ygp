@@ -1,0 +1,46 @@
+.thanks {
+    @include mq('sp') {
+        margin-top: 46px;
+    }
+    @include mq('pc') {
+        margin-top: 90px;
+    }
+
+    &-tit {
+        text-align: center;
+        >span {
+            display: block;
+            font-family: $ff-en;
+            color: $color-main;
+            font-size: 43px;
+            line-height: 1.2;
+        }
+        
+        >small {
+            display: block;
+            font-weight: $fw-bold;
+            letter-spacing: 0.1em;
+            @include mq('pc') {   
+                font-size: $fz-s;
+            }
+        }
+    }
+
+    &-txt {
+        @include mq('sp') {
+            margin: 58px 15px;
+        }
+        @include mq('pc') {
+            margin: 80px auto 0;    
+            max-width: 712px;
+        }
+        font-size: $fz-s;
+        letter-spacing: 0.1em;
+        line-height: 2.142;
+
+        >span {
+            font-weight: $fw-bold;
+        }
+    
+    }
+}

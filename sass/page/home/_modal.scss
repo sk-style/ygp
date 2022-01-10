@@ -1,0 +1,275 @@
+.modal { 
+    $this: &;
+    // &-bg {
+        // display: none;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: fixed;
+    //     background: rgba(0, 0, 0, .8);
+    //     opacity: 0.7;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: map-get($layer, 'modal') - 1;
+    //     cursor: pointer;
+    //     animation: active .4s;
+
+    //     &._show {
+    //         display: block;
+    //     }
+    // }
+
+    &-box {
+        // display: none;
+        position: fixed;
+        overflow: auto;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // height: 90%;
+        // width: 85%;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background: $color-white;
+        z-index: map-get($layer, 'modal');
+        animation: active .4s;
+
+        &._show {
+            display: block;
+        }
+    }
+
+    &-inner {
+        height: 100%;
+        @include mq('pc') {
+            display: flex;   
+        }
+    }
+
+    &-img {
+        @include mq('sp') {
+            height: 308px;
+            background: url(../img/modal_img_sp.jpg) center / cover no-repeat;   
+        }
+        @include mq('pc') {
+            flex: 0 0 25.475%;
+            background: url(../img/modal_img.jpg) center / cover no-repeat;   
+        }
+    }
+
+    &-content {
+        @include mq('sp') {
+            padding: 26px 44px 82px;
+        }
+        @include mq('pc') {
+            flex: 0 1 100%;
+            display: flex;
+            align-items: center;  
+            padding: 0 30px;
+        }
+    }
+    
+    &-tit {
+        @include mq('pc') {
+            flex: 0 0 26.38%;    
+            white-space: nowrap;
+        }
+        text-align: center;
+        font-family: $ff-en;
+        font-size: 20px;
+        letter-spacing: 0.4em;
+    }
+
+    &-list {
+        @include mq('sp') {
+            margin-top: 40px;        
+        }
+        @include mq('pc') {
+            flex: 0 1 100%;
+            margin-left: 5.325%;
+            margin-top: 11px;
+        }
+    }
+
+    &-item {
+        display: grid;
+        grid-template-rows: auto  1fr;
+        @include mq('sp') {    
+            grid-template-columns: 170px 1fr;
+        }
+        @include mq('pc') {    
+            grid-template-columns: 170px 1fr;
+        }
+        &:nth-child(n + 2) {
+            @include mq('sp') {
+                margin-top: 33px;
+            }
+            @include mq('pc') {
+                margin-top: 30px;
+            }
+        }
+
+        #{$this}-label {
+            margin-right: 15px;
+            font-family: $ff-en;
+            font-weight: $fw-bold;
+            letter-spacing: 0.3em;
+            @include mq('sp') {
+                font-size: $fz-base;
+            }
+            @include mq('pc') {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+        }
+
+        >h5 {
+            grid-area: 1 / 2 / 2 / 3;
+            position: relative;
+            @include mq('sp') {
+                font-size: $fz-base;
+            }
+        
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: -79px;
+                transform: translateY(-50%);
+                content: '';
+                background-color: $color-line;
+                height: 1px;
+                width: 64px;
+            }
+        }
+
+        #{$this}-txt {
+            grid-area: 2 / 1 / 3 / 3;
+            letter-spacing: $ls-base;
+            @include mq('pc') {                  
+                margin-top: 12px;            
+                line-height: 1.714;
+                font-size: $fz-s;
+                max-width: 330px;
+            }
+            @include mq('sp') {
+                margin-top: 10px;
+
+            }
+        }
+    }
+    
+    // &-def {
+    //     @include mq('sp') {
+    //         margin-top: 55px;        
+    //     }
+    //     @include mq('pc') {
+    //         flex: 0 1 100%;
+    //         margin-left: 5.325%;
+    //         margin-top: 11px;        
+    //     }
+        
+    //     >div {
+    //         @include mq('pc') {    
+    //             display: flex;
+    //         }
+            
+    //         &:nth-child(n + 2) {
+    //             @include mq('sp') {
+    //                 margin-top: 33px;
+    //             }
+    //             @include mq('pc') {
+    //                 margin-top: 41px;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // &-dtit {
+    //     margin-right: 15px;
+    //     font-family: $ff-en;
+    //     font-weight: $fw-bold;
+    //     letter-spacing: 0.3em;
+    //     @include mq('sp') {
+    //         font-size: $fz-base;
+    //         padding-: 170px;
+    //     }
+    //     @include mq('pc') {
+    //         flex: 0 0 155px;
+    //     }
+    // }
+    
+    // &-data {
+    //     @include mq('pc') {
+    //         flex: 0 1 100%;     
+    //     }
+
+    //     >h5 {
+    //         position: relative;
+        
+    //         &:before {
+    //             position: absolute;
+    //             top: 50%;
+    //             left: -79px;
+    //             transform: translateY(-50%);
+    //             content: '';
+    //             background-color: $color-line;
+    //             height: 1px;
+    //             width: 64px;
+    //         }
+    //     }
+
+    //     > p {
+    //         margin-top: 12px;
+    //         font-size: $fz-s;
+    //         line-height: 1.714;
+    //         letter-spacing: $ls-base;
+    //         max-width: 330px;
+    //     }
+    // }
+
+    &-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-sizing: content-box;
+        width: 40px;
+        height: 18px;
+        cursor: pointer;
+        z-index: map-get($layer, 'modal') + 1;
+        @include mq('sp') {
+            padding: 42px 30px 0 0;
+        }
+        @include mq('pc') {
+            padding: 50px 50px 0 0;    
+        }
+
+        > div {
+            position: relative;
+
+            > span {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                display: block;
+                transition: all .3s ease-in-out;
+                @include mq('sp') {
+                    background: $color-white;
+                }
+                @include mq('pc') {                   
+                    background: $color-txt;
+                }
+        
+                &:nth-of-type(1) {
+                    top: 7px;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-of-type(2) {
+                    top: 7px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
